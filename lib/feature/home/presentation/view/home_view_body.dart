@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HjomeViewBody extends StatelessWidget {
-  const HjomeViewBody({super.key});
+class HomeViewBody extends StatelessWidget {
+  const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {

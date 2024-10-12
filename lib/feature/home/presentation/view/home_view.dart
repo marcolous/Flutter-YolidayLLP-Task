@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yoliday_llp_task/core/widgets/custom_app_bar.dart';
 import 'package:yoliday_llp_task/core/widgets/custom_bottom_nav_bar_row.dart';
-import 'package:yoliday_llp_task/feature/home/presentation/view/hjome_view_body.dart';
+import 'package:yoliday_llp_task/core/widgets/custom_floating_action_button.dart';
+import 'package:yoliday_llp_task/feature/home/presentation/view/home_view_body.dart';
 import 'package:yoliday_llp_task/feature/input/presentation/view/input_view.dart';
 import 'package:yoliday_llp_task/feature/profile/presentation/view/profile_view.dart';
 import 'package:yoliday_llp_task/feature/protfolio/presentation/view/protfolio_view.dart';
@@ -17,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
   int _currentIndex = 0;
 
   List<Widget> _screens = [
-    HjomeViewBody(),
+    HomeViewBody(),
     ProtfolioView(),
     InputView(),
     ProfileView(),
@@ -31,6 +32,9 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton:
+          _currentIndex == 1 ? CustomFloatingActionButton() : null,
       bottomNavigationBar: CustomBottomNavBarRow(
         onTap: _onItemTapped,
         currentIndex: _currentIndex,

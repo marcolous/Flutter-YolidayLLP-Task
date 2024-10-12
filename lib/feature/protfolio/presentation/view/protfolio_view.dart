@@ -62,6 +62,11 @@ class _ProtfolioViewState extends State<ProtfolioView> {
         Expanded(
           child: PageView(
             controller: _pageController,
+            onPageChanged: (int index) {
+              setState(() {
+                _activeIndex = index;
+              });
+            },
             children: [
               Project(),
               Saved(),
