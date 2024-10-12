@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yoliday_llp_task/core/widgets/custom_app_bar.dart';
-import 'package:yoliday_llp_task/core/widgets/custom_bottom_nav_bar_row.dart';
+import 'package:yoliday_llp_task/feature/home/presentation/view/home_view.dart';
 
 void main() {
   runApp(const YolidayLLP());
@@ -14,22 +13,7 @@ class YolidayLLP extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
-      home: const Home(),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return sa(
-      child: Scaffold(
-        appBar: const CustomAppBar(),
-        bottomNavigationBar:
-            CustomBottomNavBarRow(onTap: (value) {}, currentIndex: 0),
-      ),
+      home: const HomeView(),
     );
   }
 }

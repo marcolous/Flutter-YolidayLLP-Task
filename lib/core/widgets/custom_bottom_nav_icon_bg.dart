@@ -17,15 +17,12 @@ class CustomBottomNavIconBG extends StatelessWidget {
     return Container(
         height: 60,
         decoration: BoxDecoration(
-          border: isActive
-              ? const Border(
-                  top: BorderSide(
-                    color: Color(0xffDF5532),
-                    width: 3,
-                  ),
-                )
-              : null,
-        ),
+            border: Border(
+          top: BorderSide(
+            color: isActive ? Color(0xffDF5532) : Colors.transparent,
+            width: 3,
+          ),
+        )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
