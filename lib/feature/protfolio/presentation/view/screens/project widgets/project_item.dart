@@ -3,8 +3,8 @@ import 'package:yoliday_llp_task/core/styles/styles.dart';
 import 'package:yoliday_llp_task/core/utils/app_images.dart';
 
 class ProjectItem extends StatelessWidget {
-  const ProjectItem({super.key});
-
+  const ProjectItem({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,10 +35,10 @@ class ProjectItem extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        'Kemampuan Merangkum Tulisan',
+                        title,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: Styles.style15Medium(context)
+                        style: Styles.style14Med(context)
                             .copyWith(color: Colors.black),
                       ),
                     ),
@@ -50,23 +50,23 @@ class ProjectItem extends StatelessWidget {
                           children: [
                             Text(
                               'BAHASA SUNDA',
-                              style: Styles.style12Med(context),
+                              style: Styles.style10Med(context),
                             ),
                             Text(
                               'Oleh Al-Baiqi Samaan',
-                              style: Styles.style12Med(context)
+                              style: Styles.style10Med(context)
                                   .copyWith(color: Color(0xff9E95A2)),
                             ),
                           ],
                         ),
                         Container(
-                          width: 70,
-                          height: 40,
+                          width: 65,
+                          height: 35,
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [Color(0xffF39519), Color(0xffFFCD67)],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
                             ),
                             borderRadius: BorderRadius.circular(10),
                           ),

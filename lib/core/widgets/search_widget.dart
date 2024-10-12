@@ -30,6 +30,10 @@ class SearchWidget extends StatelessWidget {
                 hintStyle: hintStyle,
                 border: InputBorder.none,
               ),
+              onChanged: (value) {
+                
+                
+              },
             ),
           ),
           const Gap(15),

@@ -2,10 +2,21 @@ import 'package:flutter/material.dart';
 
 class Styles {
   static String fontFamily = 'Roboto';
+
+
   static TextStyle style10(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 10),
       fontWeight: FontWeight.w400,
+      color: Colors.black,
+      fontFamily: fontFamily,
+    );
+  }
+
+  static TextStyle style10Med(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 10),
+      fontWeight: FontWeight.w500,
       color: Colors.black,
       fontFamily: fontFamily,
     );
