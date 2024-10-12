@@ -24,10 +24,12 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(title: ''),
-      bottomNavigationBar:
-          CustomBottomNavBarRow(onTap: (value) {}, currentIndex: 0),
+    return sa(
+      child: Scaffold(
+        appBar: const CustomAppBar(),
+        bottomNavigationBar:
+            CustomBottomNavBarRow(onTap: (value) {}, currentIndex: 0),
+      ),
     );
   }
 }

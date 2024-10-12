@@ -7,24 +7,20 @@ import 'package:yoliday_llp_task/core/widgets/custom_app_bar_icon.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
-    required this.title,
     this.questionIcon,
     this.backIcon,
     this.backgroundColor,
   });
-  final String title;
   final bool? questionIcon, backIcon;
   final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      title: Text('Portfolio', style: Styles.style18Med(context)),
       automaticallyImplyLeading: false,
-      backgroundColor: backgroundColor ?? const Color(0xffFFF6EC),
+      backgroundColor: Colors.white,
       actions: [
-        const Spacer(),
-        Text('Portfolio', style: Styles.style18SemiBold(context)),
-        const Spacer(),
         CustomAppBarIcon(
           onTap: () {},
           child: AppImages.shopping,

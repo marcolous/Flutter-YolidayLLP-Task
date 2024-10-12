@@ -16,7 +16,6 @@ class CustomBottomNavIconBG extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 60,
-        // padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           border: isActive
               ? const Border(

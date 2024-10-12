@@ -137,7 +137,7 @@ class Styles {
     );
   }
 
-  static TextStyle style18(BuildContext context) {
+  static TextStyle style18Med(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w500,
