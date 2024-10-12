@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:provider/provider.dart';
 import 'package:yoliday_llp_task/core/styles/styles.dart';
 import 'package:yoliday_llp_task/core/utils/app_images.dart';
+import 'package:yoliday_llp_task/feature/protfolio/presentation/manager/Project_provider/project_provider.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
     TextStyle hintStyle = Styles.style18Reg(context);
@@ -31,8 +32,8 @@ class SearchWidget extends StatelessWidget {
                 border: InputBorder.none,
               ),
               onChanged: (value) {
-                
-                
+                Provider.of<ProjectProvider>(context, listen: false)
+                    .setSearchResult(searchResult: value);
               },
             ),
           ),
