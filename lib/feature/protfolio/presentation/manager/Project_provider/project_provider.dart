@@ -33,8 +33,10 @@ class ProjectProvider extends ChangeNotifier {
   ];
 
   void setSearchResult({required String searchResult}) {
-    searchedTitles =
-        defTitles.where((title) => title.contains(searchResult)).toList();
+    searchedTitles = defTitles
+        .where(
+            (title) => title.toLowerCase().contains(searchResult.toLowerCase()))
+        .toList();
     _currentSearchResult = searchResult;
     log(searchResult);
     log(_currentSearchResult);
