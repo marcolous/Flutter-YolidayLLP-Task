@@ -6,7 +6,7 @@ class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 10),
       fontWeight: FontWeight.w400,
-      color: Colors.white,
+      color: Colors.black,
       fontFamily: fontFamily,
     );
   }
@@ -24,7 +24,7 @@ class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w400,
-      color: Colors.white,
+      color: Colors.black,
       fontFamily: fontFamily,
     );
   }
@@ -33,7 +33,7 @@ class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w500,
-      color: Colors.white,
+      color: Colors.black,
       fontFamily: fontFamily,
     );
   }
@@ -60,7 +60,7 @@ class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w600,
-      color: const Color(0xffBD6600),
+      color: Colors.black,
       fontFamily: fontFamily,
     );
   }
